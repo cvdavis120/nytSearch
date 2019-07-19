@@ -11,6 +11,8 @@ var searchTerm = "animals";
 var sYear = "2012" + "0101";
 //pull the end year
 var eYear = "2012" + "1231";
+var userAmount = 6;
+
 var queryURL =
   "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
   searchTerm +
@@ -26,7 +28,10 @@ $.ajax({
   method: "GET"
 }).then(function(dataset) {
   var numRecords = dataset.response.docs.length;
-
+  var articleArray = [];
+  for (i = 0; i < userAmount; i++) {
+    article = dataset.response.docs[i];
+  }
   console.log(response);
   console.log(numRecords);
 });

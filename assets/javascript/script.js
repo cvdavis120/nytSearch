@@ -3,6 +3,8 @@
 //https://api.nytimes.com/svc/search/v2/articlesearch.json?q=animals&api-key=d7GAhlX34Aala8VFlo2pjAppXv8PbR3I
 
 // ON CLICK NEEDS TO WRAP ALL THIS
+// on.("click") function associated with the Search Button
+$("#run-search").on("click", function(event) {
 
 var apiKey = "d7GAhlX34Aala8VFlo2pjAppXv8PbR3I";
 //pull the search term

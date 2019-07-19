@@ -5,9 +5,19 @@
 // ON CLICK NEEDS TO WRAP ALL THIS
 
 var apiKey = "d7GAhlX34Aala8VFlo2pjAppXv8PbR3I";
+//pull the search term
+var searchTerm = "animals";
+// pull the start year
+var sYear = "2012" + "0101";
+//pull the end year
+var eYear = "2012" + "1231";
 var queryURL =
   "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
   searchTerm +
+  "&facet_fields=source&facet=true&begin_date=" +
+  sYear +
+  "&end_date=" +
+  eYear +
   "&api-key=" +
   apiKey;
 
@@ -16,12 +26,7 @@ $.ajax({
   method: "GET"
 }).then(function(dataset) {
   var numRecords = dataset.response.docs.length;
-  //pull the search term
-  var searchTerm = "animals";
-  // pull the start year
-  var sYear = "2005";
-  //pull the end year
-  var eYear = "2010";
+
   console.log(response);
   console.log(numRecords);
 });

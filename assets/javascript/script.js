@@ -16,9 +16,11 @@ $.ajax({
   method: "GET"
 }).then(function(dataset) {
   var numRecords = dataset.response.docs.length;
+  //pull the search term
   var searchTerm = "animals";
-
+  // pull the start year
   var sYear = "2005";
+  //pull the end year
   var eYear = "2010";
   console.log(response);
   console.log(numRecords);
